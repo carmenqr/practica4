@@ -1,0 +1,12 @@
+/home/jorge/Escritorio/2023-2024/2_CUATRI/DS/DS-Practicas/P2/build/linux/x64/debug/bundle/p2
+/home/jorge/Escritorio/2023-2024/2_CUATRI/DS/DS-Practicas/P2/build/linux/x64/debug/bundle/data/icudtl.dat
+/home/jorge/Escritorio/2023-2024/2_CUATRI/DS/DS-Practicas/P2/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/jorge/Escritorio/2023-2024/2_CUATRI/DS/DS-Practicas/P2/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
+/home/jorge/Escritorio/2023-2024/2_CUATRI/DS/DS-Practicas/P2/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
+/home/jorge/Escritorio/2023-2024/2_CUATRI/DS/DS-Practicas/P2/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/jorge/Escritorio/2023-2024/2_CUATRI/DS/DS-Practicas/P2/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/jorge/Escritorio/2023-2024/2_CUATRI/DS/DS-Practicas/P2/build/linux/x64/debug/bundle/data/flutter_assets/version.json
+/home/jorge/Escritorio/2023-2024/2_CUATRI/DS/DS-Practicas/P2/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin
+/home/jorge/Escritorio/2023-2024/2_CUATRI/DS/DS-Practicas/P2/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
+/home/jorge/Escritorio/2023-2024/2_CUATRI/DS/DS-Practicas/P2/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/jorge/Escritorio/2023-2024/2_CUATRI/DS/DS-Practicas/P2/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag

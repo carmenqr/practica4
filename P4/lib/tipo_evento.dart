@@ -1,0 +1,4 @@
+enum TipoEvento {
+  boda,
+  conferencia,
+}
