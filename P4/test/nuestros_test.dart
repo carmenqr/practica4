@@ -189,35 +189,41 @@ void main() {
       expect(evento.fecha, "01/01/2022");
       expect(evento.ubicacion, "Mi casa");
     });
+  });
 
-    test('El evento se añade correctamente', () {
-      gestor.agregar(evento);
+  group('GestorEventos CRUD tests', () {
+    late GestorEventos gestor;
+    late Evento testEvento;
+
+    setUp(() {
+      gestor = GestorEventos([]);
+      testEvento = Evento(nombre: 'Evento Test', fecha: '2022-01-01', ubicacion: 'Ubicación Test', usuario: 'testUser');
+    });
+
+    test('Agregar evento (Create)', () async {
+      await gestor.agregar(testEvento);
       expect(gestor.misEventos.length, 1);
+      expect(gestor.misEventos[0].nombre, 'Evento Test');
+    });
+
+    test('Cargar eventos (Read)', () async {
+      await gestor.cargarEventos('testUser');
+      expect(gestor.misEventos.isNotEmpty, true);
+    });
+
+    test('Actualizar evento (Update)', () async {
+      await gestor.agregar(testEvento);  // Primero agregamos el evento para actualizarlo
+      await gestor.actualizarEvento(gestor.misEventos[0], 'Evento Actualizado', 'Ubicación Actualizada', '2022-01-02');
+      await gestor.cargarEventos('testUser'); //PARA QUE SE ACTUALICE MISEVENTOS
+      expect(gestor.misEventos[gestor.misEventos.length - 1].nombre, 'Evento Actualizado'); //EL ULTIMO QUE SE AÑADIO A LA BD
+      expect(gestor.misEventos[gestor.misEventos.length - 1].ubicacion, 'Ubicación Actualizada'); //EL ULTIMO QUE SE AÑADIO A LA BD
+      expect(gestor.misEventos[gestor.misEventos.length - 1].fecha, '2022-01-02'); //EL ULTIMO QUE SE AÑADIO A LA BD
+    });
+
+    test('Eliminar evento (Delete)', () async {
+      await gestor.agregar(testEvento);
+      await gestor.eliminar(gestor.misEventos[0]);
+      expect(gestor.misEventos.length, 0);
     });
   });
-
-  /*
-  group("Test de botones", () {
-    testWidgets('Test botón Ingresar Jefes', (WidgetTester tester) async {
-      // Construye la aplicación y dispara un frame.
-      await tester.pumpWidget(const MyApp());
-
-      // Encuentra el botón Finalizar por el texto.
-      Finder botonIngresar = find.text('Ingresar Jefes');
-
-      // Verifica que el botón Finalizar se encuentra en la pantalla.
-      expect(botonIngresar, findsOneWidget);
-
-      // Toca el botón Finalizar y dispara un frame.
-      await tester.tap(botonIngresar);
-      await tester.pump();
-
-      /* // Verifica que se muestra un diálogo.
-    expect(find.byType(Dialog), findsOneWidget); */
-
-      // Aquí puedes agregar más verificaciones para el diálogo, como verificar que contiene un campo de texto para introducir el nombre del jefe.
-      expect(find.byType(TextField), findsOneWidget);
-    });
-  });
-  */
 }
